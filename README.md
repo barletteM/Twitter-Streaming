@@ -1,3 +1,12 @@
+# General public opinion mining
+This is a twitter app with Machine Learning functionalities that enable the analyzing of tweets and classifies each tweet as having either positive or negative sentiments
+
+## Quick Access Links
+
+The Modelization part is found at [./model/twitstream.ipynb](./model/twitstream.ipynb).
+
+!The architecture diagram [Architecture diagram](documents/twitter_opinion_mining.png)
+
 ## Deployment
 
 My local deployment is done through this [docker-compose.yaml](docker-compose.yaml) file.

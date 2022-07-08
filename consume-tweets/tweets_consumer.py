@@ -16,6 +16,17 @@ from influxdb.exceptions import InfluxDBServerError, InfluxDBClientError
 class TwConsumer(KafkaConsumer):
     
     def __init__(self, *args, **kwargs):
+        '''
+    TwConsumer class inheriting from the KafkaConsumer class to
+    facilitate connection and interaction with a Kafka broker.
+
+    This class provides methods to pre-process and extract features
+    from tweets, and classify them using a pre-trained model
+    saved as a .pickle file.
+
+    Also it connects to InfluxDB as a time-series database to store 
+    the results of the classification.
+    '''
         self.broker                 = kwargs['bootstrap_servers']
         self._classifier_filepath   = kwargs.pop('classifier_filepath', None)
         self.influxdb_host          = kwargs.pop('influxdb_host', 'localhost')
