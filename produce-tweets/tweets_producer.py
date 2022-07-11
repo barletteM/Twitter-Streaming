@@ -35,7 +35,10 @@ class TwProducer(KafkaProducer):
         super().__init__(*args, **kwargs)
 
     def produce(self, stream_url, params, auth):
+        """
+        Streams 1% sample from worldwide real-time tweets
         
+        """
         response = requests.get(
             url = stream_url,
             params = params,

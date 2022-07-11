@@ -11,7 +11,20 @@ from tweets_consumer import TwConsumer
 def connect_broker(broker, topic, classifier_filepath,
     influxdb_host, influxdb_port, influxdb_database, interval_sec=3):
 
-    
+    '''
+    Helper function that tries to (re)connect to a Kafka broker
+    until a connection is established.
+
+    @arg broker String representing the hostname and port of the Kafka broker, e.g. 'kafka:9093'.
+    @arg topic String representing the topic name, e.g. tweets.
+    @arg classifier_filepath String representing path to the ML classifier pickle file.
+    @arg influxdb_host String representing the hostname of InfluxDB, e.g. 'influxdb'.
+    @arg influxdb_port Int representing the port of InfluxDB, e.g. 8086.
+    @arg influxdb_database String representing the name of the InfluxDB database, e.g. 'tweets'.
+    @arg interval_sec Int (Default 3) representing the number of seconds before attempting a reconnect.
+
+    @return Instance of TwConsumer.
+    '''
 
     try:
         logging.info("Attempting connection to Kafka topic '{}'@'{}' ...".format(topic, broker))

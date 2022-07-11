@@ -16,7 +16,7 @@ My local deployment is done through this [docker-compose.yaml](docker-compose.ya
 
 - After obtaining your set of Twitter API key and secret, you have to set those in the [secret.ini](./produce-tweets/secret.ini) file.
 
-- Run the Jupyter Notebook [twitstream.ipynb](./model/twitstream.ipynb) to build a model and save it in a *.pickle* file. See the (README.md)[./model/README.md] file for running instructions.
+- Run the Jupyter Notebook [twitstream.ipynb](./model/twitstream.ipynb) to build a model and save it in a *.pickle* file. See the [README.md](./model/README.md) file for running instructions.
 
 ### Starting the Services
 
